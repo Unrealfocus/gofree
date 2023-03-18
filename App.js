@@ -1,20 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import react from 'react';
+import { SafeAreaView,StatusBar} from 'react-native';
+import CallingScreen from './src/screen/callingScreen';
+import CallScreen from './src/screen/callScreen';
+import ContactScreen from './src/screen/contact';
+import IncomingCallScreen from './src/screen/incomingCall';
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+   <SafeAreaView>
+       <StatusBar barStyle={'dark-content'}/>
+       <ContactScreen/>
+   </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
